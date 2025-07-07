@@ -1,0 +1,195 @@
+/* Header.module.css */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Transparente oscuro */
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    /* Difumina el fondo para efecto elegante */
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.brandName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li a {
+    color: #a57248;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.reserveButton {
+    background-color: #a57248;
+    /* Marrón claro como en la imagen */
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.reserveButton:hover {
+    background-color: #8a5d3a;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .nav.open {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav li,
+    .reserveButton {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.hamburger.open .line:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+.hamburger.open .nav {
+    height: 100vh;
+}
+
+.hamburger.open .nav ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburger.open .nav li a {
+    padding: 15px 0;
+    font-size: 1.2rem;
+}
+
+.hamburger.open .nav li a:hover {
+    border-bottom: none;
+}
+
+.hamburger.open .reserveButton {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.hamburger.open .reserveButton:hover {
+    background-color: #8a5d3a;
+}
+
+.hamburger.open .logoContainer {
+    margin-bottom: 20px;
+}
+
+.hamburger.open .logo {
+    height: 50px;
+}
+
+.hamburger.open .brandName {
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+.hamburger.open .logoContainer {
+    justify-content: center;
+}
+
+.hamburger.open .nav ul {
+    padding: 0 20px;
+}
+
+.hamburger.open .nav li {
+    width: 100%;
+}
+
+.hamburger.open .nav li a {
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+.hamburger.open .nav li a:hover {
+    border-bottom: 2px solid white;
+}

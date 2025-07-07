@@ -1,0 +1,137 @@
+.testimonial-container {
+    position: relative;
+    background-image: url('../assets/flowers.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Para responsive */
+}
+
+.image-section {
+    width: 60%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    /* Fondo semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    width: 40%;
+    padding: 40px;
+}
+
+.testimonial-form {
+    max-width: 100%;
+    background: transparent;
+    border: none;
+}
+
+.testimonial-form h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.testimonial-form input,
+.testimonial-form textarea,
+.testimonial-form select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.testimonial-form label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.testimonial-form select {
+    padding: 10px;
+    -webkit-appearance: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23666' stroke-width='2' d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
+    background-size: 12px;
+}
+
+.testimonial-form button {
+    background-color: #8a5d3a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.testimonial-form button:hover {
+    background-color: #cc7a00;
+}
+
+.success {
+    color: #2ecc71;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.error {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.text-overlay {
+    padding: 40px;
+}
+
+.text-overlay h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.text-overlay p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.call-to-action {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: gold;
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+    }
+
+    .image-section,
+    .form-section {
+        width: 100%;
+    }
+
+    .image-section {
+        order: 2;
+    }
+
+    .form-section {
+        order: 1;
+    }
+}

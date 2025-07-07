@@ -1,0 +1,140 @@
+/* src/components/ReservationForm/ReservationForm.module.css */
+.reservationForm {
+  padding: 20px;
+}
+
+.reservationForm h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--dark-gray);
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"],
+.formGroup input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(160, 82, 45, 0.2);
+}
+
+.formGroup input[aria-invalid="true"] {
+  border-color: var(--error-color);
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+}
+
+.dateInputs {
+  display: flex;
+  gap: 20px;
+}
+
+.dateInputs>div {
+  flex: 1;
+}
+
+/* Estilos para el DatePicker */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.totalCost {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: var(--light-gray);
+  border: 1px dashed var(--primary-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.totalCost h3 {
+  font-size: 1.6rem;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.totalCost h3 span {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .dateInputs {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .reservationForm h2 {
+    font-size: 1.5rem;
+  }
+
+  .formGroup input[type="text"],
+  .formGroup input[type="email"],
+  .formGroup input[type="tel"],
+  .formGroup input[type="number"] {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Estilos para el botón de reserva */
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dia-ocupado {
+  background-color: #ffd6d6 !important;
+  color: #b80000 !important;
+  text-decoration: line-through;
+  border-radius: 50%;
+}

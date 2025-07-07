@@ -1,0 +1,115 @@
+/* Importa las fuentes al inicio del archivo si no lo hiciste en un CSS global */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700&display=swap');
+
+.banner {
+    position: relative;
+    height: 100vh;
+    /* Altura completa de la pantalla */
+    width: 100%;
+    /* Ancho completo, vw puede causar overflow a veces */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Previene cualquier desbordamiento */
+}
+
+/* Imagen de fondo */
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Eliminamos el filtro de brillo aquí, el overlay es más efectivo */
+}
+
+/* Overlay para mejorar el contraste del texto */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Un negro semi-transparente. Ajusta el último valor (0.4) si lo quieres más oscuro o más claro */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Contenido principal de texto */
+.content {
+    position: relative;
+    /* Asegura que esté sobre el overlay */
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    /* Agrega un poco de padding para evitar que el texto toque los bordes en pantallas pequeñas */
+}
+
+/* "SANDRA Y AMANDA" */
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+    /* Tamaño de fuente adaptable */
+    font-weight: 300;
+    /* Lighter weight */
+    letter-spacing: 0.3em;
+    /* Espaciado clave para el estilo */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-left: 0.3em;
+    /* Pequeño ajuste para compensar el letter-spacing */
+}
+
+/* "Eventos" */
+.title {
+    font-family: 'Great Vibes', cursive;
+    /* La fuente script que importamos */
+    /* Usamos clamp() para un tamaño de fuente fluido y controlado. 
+       Mínimo 4rem, idealmente 15vw, máximo 12rem. */
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: normal;
+    /* Las fuentes script suelen verse mejor en peso normal */
+    line-height: 0.8;
+    /* Reduce el espacio vertical para que se vea compacto */
+    margin: 0;
+}
+
+/* "EL SALÓN DE TUS SUEÑOS" */
+.tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.9rem, 3vw, 1.3rem);
+    font-weight: 400;
+    /* Regular weight */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    /* Más espacio respecto al título grande */
+    margin-bottom: 30px;
+}
+
+/* "www.saeventos.com" */
+.websiteLink {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.websiteLink:hover {
+    color: #f0e68c;
+    /* Un color dorado/khaki claro para el hover */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: #fffbfb;
+    /* Un gris oscuro para el título */
+    margin-bottom: 20px;
+}

@@ -1,0 +1,224 @@
+/* Base Styles */
+.salonSection {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 20px;
+}
+
+/* Description */
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    max-width: 800px;
+    /* Limit width for better readability */
+    margin: 0 auto;
+}
+
+/* Testimonial Section */
+.testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.testimonialImageContainer {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonialText {
+    text-align: left;
+}
+
+.signature {
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.position {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+/* Content Wrapper */
+.contentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.imageGallery {
+    flex: 1 1 55%;
+    min-width: 300px;
+    max-width: 700px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.salonImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Details */
+.details {
+    flex: 1 1 40%;
+    min-width: 300px;
+    text-align: left;
+    padding: 20px;
+}
+
+.amenities {
+    margin-bottom: 25px;
+}
+
+.amenities h3,
+.pricing h3 {
+    font-size: 1.4rem;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.amenities ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.amenityItem {
+    background-color: var(--light-gray);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.pricing {
+    margin-bottom: 30px;
+}
+
+.pricing p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.pricing strong {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.reserveButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reserveButton:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contentWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageGallery,
+    .details {
+        width: 100%;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .salonSection {
+        padding: 40px 15px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .amenities h3,
+    .pricing h3 {
+        font-size: 1.2rem;
+    }
+
+    .amenities ul {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .testimonialImageContainer {
+        width: 120px;
+        height: 120px;
+    }
+}
